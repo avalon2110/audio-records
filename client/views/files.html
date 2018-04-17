@@ -1,0 +1,59 @@
+<div class="row">
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Audio Records</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-if="!isRecording" ng-click="startRecord()">
+
+            <a>Start Record <i class="fas fa-microphone"></i></a>
+          </li>
+          <li ng-if="isRecording" ng-click="stopRecord()">
+            <a >Stop/Save Record <i class="fas fa-microphone-slash"></i></a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Popular cars</h3>
+        </div>
+        <div class="panel-body text-center" ng-if="files.length > 0">
+            <div class="row">
+                <div ng-repeat="file in files">
+                    <div class="col-md-4 col-sm-12 col-xs-12" style="margin-bottom: 15px;">
+                        <div class="col-xs-12">
+                            <h4>{{file}}</h4>
+                            <!-- <p>{{file.description}}</p> -->
+                        </div>
+                        <div class="col-xs-12">
+                          <audio controls>
+                            <source ng-src="{{getFilePath(file)}}" type="audio/mp3">
+                          Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body text-center" ng-if="files.length == 0">
+          <p class="lead">There is no records yet.</p>
+        </div>
+    </div>
+  </div>
+</div>

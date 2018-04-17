@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "authors": [
+    "Stanislav Tyrinov <tyrinow1994@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.10",
+    "angular-route": "^1.6.10",
+    "angular-ui-notification": "^0.3.6",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.3.1"
+  }
+}

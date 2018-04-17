@@ -1,0 +1,17 @@
+{
+  "name": "Audio Records App",
+  "version": "1.0.0",
+  "description": "Example for recording and saving audio files",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Stanislav Tyrinov",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "^4.16.2",
+    "multer": "*",
+    "rimraf": "^2.6.2"
+  }
+}
